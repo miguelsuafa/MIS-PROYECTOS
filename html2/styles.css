@@ -1,0 +1,59 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+}
+a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+header {
+    display: flex;
+    min-height: 70px;
+    background-color: rgb(36, 35, 35);
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+.logo {
+    display: flex;
+    align-items: center;
+}
+.logo img {
+    margin-right: 20px;
+    width: 130px;
+    height: 130px;
+}
+nav a {
+    font-weight: 900;
+    padding-right: 10px;
+}
+nav a:hover {
+    color: rgb(238, 255, 0);
+}
+h1 {
+    color: rgb(0, 38, 255);
+    font-size: 3rem;
+    margin: 0;
+    font-family: 'Courier New', Courier, monospace;
+}
+.logo:hover {
+    cursor: pointer;
+    color: rgb(238, 255, 0);
+}
+@media (max-width: 680px){
+    header {
+        flex-direction: column;
+    }
+    nav {
+        padding: 10px 0px;
+    }
+}
+ol .li {
+    margin: 0;
+}
+.
+background: -webkit-linear-gradient(128deg,
+    hsl(145, 90%, 52%), hsl(211, 100%, 50%));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+

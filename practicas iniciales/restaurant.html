@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>OIGA MIRE VEA</title>
+  <link rel="stylesheet" href="restaurant.css">
+</head>
+<body>
+  <header>
+    <h1>Restaurante ¡OIGA MIRE VEA!</h1>
+  </header>
+
+  <nav>
+    <a href="#inicio">Inicio</a>
+    <a href="#menu">Menú</a>
+    <a href="#reservas">Reservas</a>
+    <a href="#facturacion">Facturación</a>
+    <a href="#contacto">Contáctanos</a>
+  </nav>
+
+  <main>
+    <section id="inicio">
+      <h2>Bienvenido al Restaurante delicioso</h2>
+      <p>Disfruta de la mejor comida en un ambiente acogedor y elegante.</p>
+    </section>
+
+    <section id="menu">
+      <h2>Menú</h2>
+      <div class="menu-item">
+        <h3>Entradas</h3>
+        <ul>
+          <li>Ensalada fresca</li>
+          <li>Sopa del día</li>
+        </ul>
+      </div>
+      <div style="background-color: aquamarine;" class="menu-item">
+        <h3>Platos principales</h3>
+        <ul>
+          <li>Pasta Alfredo</li>
+          <li>Filete de salmón a la parrilla</li>
+          <li>Pollo asado con verduras</li>
+        </ul>
+      </div>
+      <div class="menu-item">
+        <h3>Postres</h3>
+        <ul>
+          <li>Tarta de chocolate</li>
+          <li>Helado casero</li>
+        </ul>
+      </div>
+    </section>
+
+
+    <section id="reservas">
+      <h2>Reservas</h2>
+      <p>Realiza una reserva para asegurar tu mesa en nuestro restaurante.</p>
+      <!-- Formulario de reservas -->
+    </section>
+
+    <section id="facturacion">
+      <h2>Facturación en línea</h2>
+      <p>Completa el formulario para solicitar tu factura electrónica.</p>
+      <!-- Formulario de facturación -->
+    </section>
+
+    <section id="contacto">
+      <h2>Contáctanos</h2>
+      <p>Si tienes alguna pregunta o comentario, no dudes en ponerte en contacto con nosotros.</p>
+      <!-- Formulario de contacto o información de contacto -->
+    </section>
+  </main>
+  <section id="carrito">
+    <h2>Carrito de compras</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Producto</th>
+          <th>Cantidad</th>
+          <th>Precio</th>
+          <th>Eliminar</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Filas de productos agregados al carrito -->
+      </tbody>
+      <tfoot>
+        <tr>
+          <td colspan="3">Total:</td>
+          <td id="total">0</td>
+        </tr>
+      </tfoot>
+      
+  <script>
+    // Obtener referencia a los elementos del DOM
+    const carrito = document.querySelector("#carrito tbody");
+    const totalElement = document.getElementById("total");
+  
+    // Variable para almacenar el total de la compra
+    let total = 0;
+  
+    // Función para agregar un producto al carrito
+    function agregarProducto(nombre, precio) {
+      // Crear una nueva fila en la tabla del carrito
+      const nuevaFila = document.createElement("tr");
+  
+      // Crear las celdas de la fila
+      const nombreCelda = document.createElement("td");
+      nombreCelda.textContent = nombre;
+  
+      const cantidadCelda = document.createElement("td");
+      cantidadCelda.textContent = "1";
+  
+      const precioCelda = document.createElement("td");
+      precioCelda.textContent = precio;
+  
+      const eliminarCelda = document.createElement("td");
+      const eliminarEnlace = document.createElement("a");
+      eliminarEnlace.textContent = "Eliminar";
+      eliminarEnlace.href = "#";
+      eliminarEnlace.addEventListener("click", function () {
+        eliminarProducto(nuevaFila);
+      });
+      eliminarCelda.appendChild(eliminarEnlace);
+  
+      // Agregar las celdas a la fila
+      nuevaFila.appendChild(nombreCelda);
+      nuevaFila.appendChild(cantidadCelda);
+      nuevaFila.appendChild(precioCelda);
+      nuevaFila.appendChild(eliminarCelda);
+  
+      // Agregar la fila al carrito
+      carrito.appendChild(nuevaFila);
+  
+      // Actualizar el total
+      total += precio;
+      totalElement.textContent = total;
+    }
+  
+    // Función para eliminar un producto del carrito
+    function eliminarProducto(fila) {
+      // Obtener el precio del producto a eliminar
+      const precio = parseFloat(fila.querySelector("td:nth-child(3)").textContent);
+  
+      // Restar el precio del total
+      total -= precio;
+      totalElement.textContent = total;
+  
+      // Eliminar la fila del carrito
+      fila.remove();
+    }
+  
+    // Ejemplos de uso
+    agregarProducto("Pasta Alfredo", 10);
+    agregarProducto("Tarta de chocolate", 8);
+  </script>
+    </table>
+    <button id="vaciar-carrito">Vaciar carrito</button>
+    <button id="realizar-pedido">Realizar pedido</button>
+  </section>
+</main>
+
+  <footer>
+    <p>&copy; 2023 Restaurante delicioso. Todos los derechos reservados.</p>
+  </footer>
+  
+</body>
+</html>
