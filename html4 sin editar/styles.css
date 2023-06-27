@@ -1,0 +1,282 @@
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+*{
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+html{
+    scroll-behavior: smooth;
+}
+/* menu */
+
+.container-header {
+    background: #1e2326;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 99;
+}
+.container-header header {
+    max-width: 1100px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+}
+.container-header header .logo a{
+    font-family: 'Righteous';
+    font-size: 36px;
+    color: #e7d408;
+    text-decoration: none;
+}
+.container-header header ul{
+    display: flex;
+    list-style: none;
+}
+.container-header header nav ul li a{
+    text-align: none;
+    color: #fff;
+    margin: 0 15px;
+    padding: 3px;
+    transition: .5s;
+    text-decoration: none;
+}
+.container-header header nav ul li a:hover{
+    color: #e7d408;
+}
+.nav-responsive{
+        background-color: #e7d408;
+        color: #fff;
+        padding: 5px 10px;
+        border-radius: 5px;
+        cursor: pointer;
+}
+.nav-responsive:hover{
+    background-color: #252a2e;
+    color: #e7d408;
+}
+
+/* Section Sobre Mi */
+.sobremi{
+    background-color: #1e2326;
+    color: #fff;
+    padding: 50px 20px;
+}
+.sobremi .container-section{
+    max-width: 1100px;
+    margin: auto;
+}
+.sobremi .container-section h2{
+    font-size: 48px;
+    font-family: 'Righteous';
+    text-align: center;
+    padding: 80px 0;
+}
+.sobremi .container-section p{
+    font-size: 18px;
+    line-height: 22px;
+    margin-bottom: 20px;
+}
+.sobremi .container-section p span{
+    color: #e7d408;
+    font-weight: bold;
+}
+.sobremi .fila {
+    display: flex;
+}
+.sobremi .fila .col {
+    height: 100%;
+    width: 50%;
+}
+.sobremi .fila .col h3 {
+    font-size: 28px;
+    font-family: 'Righteous';
+    margin-bottom: 25px;
+}
+.sobremi .fila .col ul {
+    list-style: none;
+}
+.sobremi .fila .col ul li {
+    margin: 12px 0;
+}
+.sobremi .fila .col ul li strong {
+    display: inline-block;
+    color: #e7d408;
+    width: 130px;
+}
+.sobremi .fila .col ul li span {
+    background-color: #e7d408;
+    padding: 3px;
+    font-weight: bold;
+    border-radius: 3px;
+}
+.sobremi .fila .col .container-intereses {
+    display: flex;
+    flex-wrap: wrap;
+}
+.sobremi .fila .col .container-intereses img {
+    width: 800px;
+    min-width: 100px;
+    max-width: 400px;
+    height: 800px;
+    min-height: 200px;
+    max-height: 300px;
+    background-color: #252a2e;
+    border-radius: 100%;
+    margin: 0 95px 95px 0 ;
+    border: 5px double #e7d408;
+   
+}
+.sobremi .fila .col .container-intereses img:hover {
+    background-color: #e7d408;
+    transform: scale(1.1);
+    cursor: pointer;
+    color: #000;
+    
+}
+.sobremi .fila .col .container-intereses .intereses i {
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+.sobremi button {
+    cursor: pointer;
+    background-color: transparent;
+    border: 2px solid #fff;
+    width: fit-content;
+    display: block;
+    margin: 20px auto;
+    padding: 10px 22px;
+    font-size: 16px;
+    color: #fff;
+    position: relative;
+    z-index: 10;
+}
+.sobremi button .overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: #e7d408;
+    z-index: -1;
+    transition: 1s;
+}
+.sobremi button:hover .overlay{
+    width: 100%;
+}
+/*section biografia*/
+.biografia{
+    background-color: #252a2e;
+    color: #fff;
+    padding: 50px 20px;
+}
+.biografia .container-section{
+    max-width: 1100px;
+    margin: auto;
+}
+.biografia .container-section h2{
+    font-size: 48px;
+    font-family: 'Righteous';
+    text-align: center;
+    padding: 80px 0;
+}
+.biografia .container-section p{
+    font-size: 18px;
+    text-align: justify;
+    line-height: 22px;
+    margin-bottom: 70px;
+}
+.biografia .container-section p span{
+    color: #e7d408;
+    font-weight: bold;
+}
+.biografia .fila {
+    display: flex;
+}
+.biografia .fila .col {
+    height: 100%;
+    width: 50%;
+}
+.biografia .fila .col h3 {
+    font-size: 28px;
+    font-family: 'Righteous';
+    margin-bottom: 25px;
+}
+.biografia .fila .col ul {
+    list-style: none;
+}
+.biografia .fila .col ul li {
+    margin: 12px 0;
+}
+.biografia .fila .col ul li strong {
+    display: inline-block;
+    color: #e7d408;
+    width: 130px;
+}
+.biografia .fila .col ul li span {
+    background-color: #e7d408;
+    padding: 3px;
+    font-weight: bold;
+    border-radius: 3px;
+}
+.biografia .fila .col .container-imagen {
+    display: flex;
+    flex-wrap: wrap;
+}
+.biografia .fila .col .container-imagen img {
+    width: 800px;
+    min-width: 350px;
+    height: 800px;
+    min-height: 200px;
+    max-height: 300px;
+    background-color: #252a2e;
+    border-radius: 1%;
+    margin: 10;
+    transition: 1s;
+    object-position: left;
+   
+}
+.biografia .fila .col .container-imagen img:hover {
+    background-color: #e7d408;
+    transform: scale(1.1);
+    cursor: pointer;
+    border: 5px solid #e7d408;
+    border-radius: 1%;
+    color: #000;
+    text-decoration: dotted;
+    transition: 1s;
+    
+}
+.biografia .fila .col .container-imagen .biografia i {
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+.biografia button {
+    cursor: pointer;
+    background-color: transparent;
+    border: 2px solid #fff;
+    width: fit-content;
+    display: block;
+    margin: 20px auto;
+    padding: 10px 22px;
+    font-size: 16px;
+    color: #fff;
+    position: relative;
+    z-index: 10;
+}
+.biografia button .overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: #e7d408;
+    z-index: -1;
+    transition: 1s;
+}
+.biografia button:hover .overlay{
+    width: 100%;
+}

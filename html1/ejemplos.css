@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik+Puddles&display=swap');
 body {
-    background-image: url(https://cdn.pixabay.com/photo/2014/02/19/16/35/background-269933_1280.jpg);
-    background-position: center;
+    background: -webkit-linear-gradient(128deg,
+    hsl(145, 90%, 52%), hsl(211, 100%, 50%), hsl(331, 100%, 51%));
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;

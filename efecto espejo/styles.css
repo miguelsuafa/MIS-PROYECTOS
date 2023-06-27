@@ -1,0 +1,34 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height:100vh;
+    background-image: url(paginas-descargar-fondos-de-pantalla.jpg.jfif);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.contenedor{
+    color: white;
+    width: 500px;
+    height: 20px;
+    text-align: center;
+}
+.titulo{
+    font-size: 30px;
+    margin-bottom: 1rem;
+}
+.clase{
+    width: 500px;
+    height: 500px;
+    background-color: rgba(128, 128, 128, .200);
+    backdrop-filter: blur(12px );
+    border-radius: 10px;
+    box-shadow: 0 0 30px black;
+}
